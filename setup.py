@@ -15,10 +15,13 @@ def get_requirements(file_path: str) -> List[str]:
     return requirements  
 
 setup(
-    name='KidneyDiseaseModel',
+    name='cnnClassifier',  
     version='0.0.1',
     author='Avirup',
     author_email='iandiehard@gmail.com',
-    packages=find_packages(),
+    
+    packages=find_packages(where="src"),     
+    package_dir={"": "src"},                 
+    
     install_requires=get_requirements('requirements.txt')
 )
